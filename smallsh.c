@@ -283,15 +283,6 @@ It is either sent to one of the 3 built in commands or to the new() function for
 as parameter*/
 void evaluateCommand(struct command *currCommand, struct sigaction sa)
 {
-    //printf("currCommand->comm is %s\n", currCommand->comm);
-    //fflush(stdout);
-    //printf("currCommand->arg is %s\n", currCommand->arg);
-    //fflush(stdout);
-    //printf("currCommand->redirect is %s\n", currCommand->redirect);
-    //fflush(stdout);
-    //printf("currCommand->foreground is %d\n", currCommand->foreground);
-    //fflush(stdout);
-    
     if((strstr(currCommand->comm, "exit")) != NULL){exit(0);}
     else if((strstr(currCommand->comm, "cd")) != NULL){change(currCommand);}
     else if((strstr(currCommand->comm, "status")) != NULL){status();}
